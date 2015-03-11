@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-	background-color: #ddd;
+	background-color: #2C6B95;
 	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
 	background-image: linear-gradient(top, #aaa, #ddd);
@@ -48,14 +48,14 @@ body {
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	background-color: #2C6B95
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,
 .ie7 body,
 .ie8 body {
-	border-color: #255b17;
+	border-color:  #2C6B95;
 	border-style: solid;
 	border-width: 0 1px;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color:  #2C6B95;
 }
 
 a:hover, a:active {
@@ -73,7 +73,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color:  #2C6B95;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
@@ -108,7 +108,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	background: #2C6B95
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -118,7 +118,7 @@ img {
 }
 
 .footer a {
-	color: #255b17;
+	color:  #2C6B95;
 }
 
 .spinner {
@@ -283,7 +283,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color:  #2C6B95;
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;
