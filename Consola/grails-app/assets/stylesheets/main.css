@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
 	background-color: #F2F2F2;
 	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
+	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));*/
 	background-image: linear-gradient(top, #aaa, #ddd);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
 	background-repeat: no-repeat;
@@ -50,7 +50,7 @@ body {
 }
 
 #grailsLogo {
-	background-color: #EE0000
+	background-color: #FE2E2E;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -67,7 +67,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color:  #2C6B95;
+	color:  black;
 }
 
 a:hover, a:active {
@@ -75,7 +75,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color:  #ff0000;
+	color:  black;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
@@ -110,7 +110,7 @@ img {
 }
 
 .footer {
-	background: #2C6B95
+	background: #blue;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -137,7 +137,7 @@ img {
 /* NAVIGATION MENU */
 
 .nav {
-	background-color: #0404B4;
+	background-color: #2E2EFE;
 	padding: 0.5em 0.75em;
 	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
@@ -160,7 +160,7 @@ img {
 }
 
 .nav a {
-	color: #666666;
+	color: #FFFFFF;
 	display: block;
 	padding: 0.25em 0.7em;
 	text-decoration: none;
@@ -187,7 +187,7 @@ img {
 }
 
 .nav a.home, .nav a.list, .nav a.create {
-	background-color:#0000FF;
+	/*background-color:#0000FF;*/
 	background-position: 0.7em center;
 	background-repeat: no-repeat;
 	text-indent: 25px;
@@ -461,7 +461,7 @@ table tr:first-child td:last-child {
 }tr:hover td{
 	
 }
-tr:nth-child(odd){ background-color:#aad4ff; }
+tr:nth-child(odd){ background-color:#3B6195; }
 tr:nth-child(even)    { background-color:#ffffff; }td{
 	vertical-align:middle;
 	
@@ -470,7 +470,7 @@ tr:nth-child(even)    { background-color:#ffffff; }td{
 	border-width:0px 1px 1px 0px;
 	text-align:left;
 	padding:7px;
-	font-size:10px;
+	font-size:11px;
 	font-family:Arial;
 	font-weight:normal;
 	color:#000000;
@@ -481,19 +481,19 @@ tr:nth-child(even)    { background-color:#ffffff; }td{
 }tr:last-child td:last-child{
 	border-width:0px 0px 0px 0px;
 }
-tr:first-child td{
+/*tr:first-child td{
 		background:-o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
 	background:-moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");	background: -o-linear-gradient(top,#005fbf,003f7f);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");	background: -o-linear-gradient(top,#005fbf,003f7f);*/
 
-	background-color:#005fbf;
-	border:0px solid #000000;
-	text-align:center;
-	border-width:0px 0px 1px 1px;
-	font-size:14px;
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:11px;
 	font-family:Arial;
-	font-weight:bold;
-	color:#ffffff;
+	font-weight:normal;
+	color:#000000;
 }
 tr:first-child:hover td{
 	background:-o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
@@ -538,7 +538,7 @@ th a {
 }
 
 th a:link, th a:visited {
-	color: #666666;
+	color: black;
 }
 
 th a:hover, th a:focus {
