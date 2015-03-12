@@ -402,7 +402,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 
 /* TABLES */
 
-.table{
+.table table{
 	margin:0px;padding:0px;
 	width:100%;
 	box-shadow: 10px 10px 5px #888888;
@@ -442,11 +442,14 @@ tr>td:first-child, tr>th:first-child {
 	padding-left: 1.25em;
 	-moz-border-radius-topleft:14px;
 	-webkit-border-top-left-radius:14px;
+	-moz-border-radius-left:14px;
 	border-top-left-radius:14px;
 }
 
 tr>td:last-child, tr>th:last-child {
 	padding-right: 1.25em;
+	-moz-border-radius-toprigth:14px;
+	-webkit-border-top-right-radius:14px;
 	-moz-border-radius-bottomright:14px;
 	-webkit-border-bottom-right-radius:14px;
 	border-bottom-right-radius:14px;
@@ -683,13 +686,13 @@ th:hover, tr:hover {
 
 }*/
 .buttons .delete{
-	/*color:#d12f19;*/
+	color:#d12f19;
 }
 .buttons .edit{
-	/*color:#336699;*/
+	color:#336699;
 }
 .buttons .save{
-	/*color:#529214;*/
+	color:#529214;*/
 }
 
 .ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,
