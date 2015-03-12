@@ -3,7 +3,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
+		<style type="text/css" href="${resource(dir: 'css', file: 'estilos.css')}" media="screen">
 			#status {
 				background-color: #eee;
 				border: .2em solid #fff;
