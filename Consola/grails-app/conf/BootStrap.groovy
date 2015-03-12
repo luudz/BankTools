@@ -1,5 +1,6 @@
 import com.mx.eglobal.CatalogoVariables;
 import com.mx.eglobal.Variable;
+import com.mx.eglobal.Regla;
 class BootStrap {
 
     def init = { servletContext ->
@@ -18,6 +19,9 @@ class BootStrap {
     		new Variable(alias:"Regla003", columna:"Columna3", descripcion:"Esta es la Tercer variable", categoria:"3", enabled:true).save(failonError:true);
     		new Variable(alias:"Regla004", columna:"Columna4", descripcion:"Esta es la cuarta variable", categoria:"4", enabled:true).save(failonError:true);
     	}
+    	/*if(!Regla.count()){
+    		new Regla(nombre:"Regla1", descripcion:"Regla1", microregla:"Esta es la primer microregla", enabled:true).save(failonError:true);
+    	}*/
     }
     def destroy = {
     }
