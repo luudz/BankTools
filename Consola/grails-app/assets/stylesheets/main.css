@@ -44,7 +44,7 @@ body {
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
+	   /-moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
 	        box-shadow: 0 0 0.3em #255b17;
 }
@@ -68,6 +68,7 @@ body {
 
 a:link, a:visited, a:hover {
 	color:  black;
+	text-decoration:none;   
 }
 
 a:hover, a:active {
@@ -110,7 +111,7 @@ img {
 }
 
 .footer {
-	background: #blue;
+	background: #2E2EFE;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -243,7 +244,7 @@ fieldset,
 }
 
 label {
-	cursor: pointer;
+	/*cursor: pointer;*/
 	display: inline-block;
 	margin: 0 0.25em 0 0;
 }
@@ -407,7 +408,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 	box-shadow: 10px 10px 5px #888888;
 	border:1px solid #000000;
 	
-	-moz-border-radius-bottomleft:14px;
+	/*-moz-border-radius-bottomleft:14px;
 	-webkit-border-bottom-left-radius:14px;
 	border-bottom-left-radius:14px;
 	
@@ -421,7 +422,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 	
 	-moz-border-radius-topleft:14px;
 	-webkit-border-top-left-radius:14px;
-	border-top-left-radius:14px;
+	border-top-left-radius:14px;*/
 }
 
 table {
@@ -461,7 +462,7 @@ table tr:first-child td:last-child {
 }tr:hover td{
 	
 }
-tr:nth-child(odd){ background-color:#3B6195; }
+tr:nth-child(odd){ background-color:#2E2EFE; }
 tr:nth-child(even)    { background-color:#ffffff; }td{
 	vertical-align:middle;
 	
@@ -470,9 +471,9 @@ tr:nth-child(even)    { background-color:#ffffff; }td{
 	border-width:0px 1px 1px 0px;
 	text-align:left;
 	padding:7px;
-	font-size:11px;
+	font-size:12px;
 	font-family:Arial;
-	font-weight:normal;
+	font-weight:700;
 	color:#000000;
 }tr:last-child td{
 	border-width:0px 1px 0px 0px;
@@ -568,7 +569,7 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-	background: #E1F2B6;
+	/*background: #E1F2B6;*/
 }
 
 /* PAGINATION */
@@ -653,7 +654,7 @@ th:hover, tr:hover {
     text-decoration:none;
     font-weight:bold;
     color:#565656;
-    cursor:pointer;
+    /*cursor:pointer;*/
     padding:5px 10px 6px 7px;
 }
 
@@ -671,7 +672,7 @@ th:hover, tr:hover {
 .no-borderradius .buttons input:hover, .no-borderradius .buttons input:focus,
 .no-borderradius .buttons a:hover, .no-borderradius .buttons a:focus {
 	background-color: #0000FF;
-	color: #444444;
+	/*color: #444444;*/
 	text-decoration: underline;
 }
 
@@ -682,20 +683,20 @@ th:hover, tr:hover {
 
 }*/
 .buttons .delete{
-	color:#d12f19;
+	/*color:#d12f19;*/
 }
 .buttons .edit{
-	color:#336699;
+	/*color:#336699;*/
 }
 .buttons .save{
-	color:#529214;
+	/*color:#529214;*/
 }
 
 .ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,
 .ie7 .buttons input.delete, .ie7 .buttons input.edit, .ie7 .buttons input.save {
-	background-color:#E6EFC2;
+	/*background-color:#E6EFC2;
     border:1px solid #C6D880;
-    color:#529214;
+    color:#529214;*/
 }
 .buttons a.save:active{
     background-color:#529214;
@@ -716,7 +717,7 @@ th:hover, tr:hover {
 }*/
 
 a.skip {
-	background-color:#529214;
+	/*background-color:#529214;*/
 	position: absolute;
 	left: -9999px;
 }
