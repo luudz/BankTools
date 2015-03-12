@@ -8,6 +8,7 @@ class BootStrap {
     		new CatalogoVariables(nombre:"Regla003", descripcion:"Esta es la regla Regla003",enabled:true).save(failonError:true);
     		new CatalogoVariables(nombre:"Regla004", descripcion:"Esta es la regla Regla004",enabled:false).save(failonError:true);
     		new CatalogoVariables(nombre:"Regla005", descripcion:"Esta es la regla Regla005",enabled:true).save(failonError:true);
+    		new CatalogoVariables(nombre:"Regla006", descripcion:"Esta es la regla Regla006",enabled:true).save(failonError:true);
     		
     	}
     }
