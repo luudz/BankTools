@@ -5,7 +5,6 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'catalogoVariables.label', default: 'CatalogoVariables')}" />
-		<link type="text/css" href="${resource(dir: 'css', file: 'estilos.css')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -47,6 +46,15 @@
 					<span id="nombre-label" class="property-label"><g:message code="catalogoVariables.nombre.label" default="Nombre" /></span>
 					
 						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${catalogoVariablesInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${catalogoVariablesInstance?.variable}">
+				<li class="fieldcontain">
+					<span id="variable-label" class="property-label"><g:message code="catalogoVariables.variable.label" default="Variable" /></span>
+					
+						<span class="property-value" aria-labelledby="variable-label"><g:link controller="variable" action="show" id="${catalogoVariablesInstance?.variable?.id}">${catalogoVariablesInstance?.variable?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

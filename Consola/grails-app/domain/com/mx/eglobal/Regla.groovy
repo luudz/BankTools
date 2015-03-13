@@ -5,7 +5,7 @@ class Regla {
 	String nombre;
 	String descripcion;
 	//static hasMany =[microregla :MicroRegla];
-	String microregla;
+	MicroReglas microregla;
 	Boolean enabled;
 
     static constraints = {
