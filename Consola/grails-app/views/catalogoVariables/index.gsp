@@ -29,6 +29,8 @@
 						<g:sortableColumn property="enabled" title="${message(code: 'catalogoVariables.enabled.label', default: 'Enabled')}" />
 					
 						<g:sortableColumn property="nombre" title="${message(code: 'catalogoVariables.nombre.label', default: 'Nombre')}" />
+
+						<g:sortableColumn property="nombre" title="${message(code: 'catalogoVariables.nombre.label', default: 'Usuario')}" />
 					
 					</tr>
 				</thead>
@@ -41,6 +43,7 @@
 						<td><g:formatBoolean boolean="${catalogoVariablesInstance.enabled}" /></td>
 					
 						<td>${fieldValue(bean: catalogoVariablesInstance, field: "nombre")}</td>
+						<td>Juanita</td>
 					
 					</tr>
 				</g:each>
