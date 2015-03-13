@@ -5,7 +5,6 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'variable.label', default: 'Variable')}" />
-		<link type="text/css" href="${resourse(dir:'css',file:'estilos.css')}"/>
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>

@@ -1,11 +1,14 @@
 package com.mx.eglobal
+import com.mx.eglobal.Variable;
 
 class MicroReglas {
-	String variable;
+	Variable variable;
 	String valor;
 	int tipo;
-	Boolean enable;
+	Boolean enabled;
 
     static constraints = {
     }
+    String toString(){
+    	return "$valor";}
 }

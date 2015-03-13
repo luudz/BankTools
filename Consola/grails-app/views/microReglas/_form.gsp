@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: microReglasInstance, field: 'enable', 'error')} ">
-	<label for="enable">
-		<g:message code="microReglas.enable.label" default="Enable" />
+<div class="fieldcontain ${hasErrors(bean: microReglasInstance, field: 'enabled', 'error')} ">
+	<label for="enabled">
+		<g:message code="microReglas.enabled.label" default="Enabled" />
 		
 	</label>
-	<g:checkBox name="enable" value="${microReglasInstance?.enable}" />
+	<g:checkBox name="enabled" value="${microReglasInstance?.enabled}" />
 
 </div>
 
@@ -34,7 +34,7 @@
 		<g:message code="microReglas.variable.label" default="Variable" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="variable" required="" value="${microReglasInstance?.variable}"/>
+	<g:select id="variable" name="variable.id" from="${com.mx.eglobal.Variable.list()}" optionKey="id" required="" value="${microReglasInstance?.variable?.id}" class="many-to-one"/>
 
 </div>
 

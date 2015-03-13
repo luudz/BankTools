@@ -9,4 +9,6 @@ class Variable {
 
     static constraints = {
     }
+    String toString(){
+    	return "$alias";}
 }

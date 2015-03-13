@@ -50,7 +50,7 @@ body {
 }
 
 #grailsLogo {
-	background-color: #FE2E2E;
+	background-color: #848484;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -415,23 +415,23 @@ tr {
 	border: 0;
 }
 
-tr>td:first-child, tr>th:first-child {
+/*tr>td:first-child, tr>th:first-child {
 	padding-left: 1.25em;
 	-moz-border-radius-topleft:14px;
 	-webkit-border-top-left-radius:14px;
 	-moz-border-radius-bottomleft:14px;
 	-webkit-border-bottom-left-radius:14px;
 	border-bottom-left-radius:14px;
-}
+}*/
 
-tr>td:last-child, tr>th:last-child {
+/*tr>td:last-child, tr>th:last-child {
 	padding-right: 1.25em;
 	-moz-border-radius-toprigth:14px;
 	-webkit-border-top-right-radius:14px;
 	-moz-border-radius-bottomright:14px;
 	-webkit-border-bottom-right-radius:14px;
 	border-bottom-right-radius:14px;
-}
+}*/
 
 tr:nth-child(odd){background-color:#E6E6E6;}
 tr:nth-child(even){background-color:#BDBDBD;}
@@ -454,8 +454,8 @@ td, th {
 }
 
 th {
-	background-image: -moz-linear-gradient(top, #F2F2F2, #ffffff);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2F2F2), color-stop(1, #ffffff));
+	background-image: -moz-linear-gradient(top, #2E2E2E, #424242);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2E2E2E), color-stop(1, #424242));
 	    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
 	color: #666666;
@@ -473,18 +473,18 @@ th a {
 	display: block;
 	text-decoration: none;
 }
-
-th a:link, th a:visited{
-	color: #424242;
-}
-
-th a:hover, th a:focus{
-	color: #333333;
-}
-
 tr a:hover {
 	color: #FF0000;
 }
+
+th a:link, th a:visited{
+	color: #F2F2F2;
+}
+
+th a:hover, th a:focus{
+	color: #08088A;
+}
+
 
 th.sortable a {
 	background-position: center;
@@ -620,21 +620,12 @@ th:hover{
 	text-decoration: underline;
 }
 
-/*.buttons .delete, .buttons .edit, .buttons .save {
+.buttons .delete, .buttons .edit, .buttons .save {
 	background-position: 0.7em center;
 	background-repeat: no-repeat;
 	text-indent: 25px;
 
-}*/
-.buttons .delete{
-	color:#d12f19;
-}
-.buttons .edit{
-	color:#336699;
-}
-.buttons .save{
-	color:#529214;*/
-}
+}	
 
 .ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,
 .ie7 .buttons input.delete, .ie7 .buttons input.edit, .ie7 .buttons input.save {
@@ -649,14 +640,17 @@ th:hover{
 }
 
 .buttons .delete {
+	color:#d12f19;
 	background-image: url(../images/skin/database_delete.png);
 }
 
 .buttons .edit {
+	color:#336699;
 	background-image: url(../images/skin/database_edit.png);
 }
 
 .buttons .save {
+	color:#529214;
 	background-image: url(../images/skin/database_save.png);
 }
 

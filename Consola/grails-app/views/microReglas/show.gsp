@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list microReglas">
 			
-				<g:if test="${microReglasInstance?.enable}">
+				<g:if test="${microReglasInstance?.enabled}">
 				<li class="fieldcontain">
-					<span id="enable-label" class="property-label"><g:message code="microReglas.enable.label" default="Enable" /></span>
+					<span id="enabled-label" class="property-label"><g:message code="microReglas.enabled.label" default="Enabled" /></span>
 					
-						<span class="property-value" aria-labelledby="enable-label"><g:formatBoolean boolean="${microReglasInstance?.enable}" /></span>
+						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${microReglasInstance?.enabled}" /></span>
 					
 				</li>
 				</g:if>
@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="variable-label" class="property-label"><g:message code="microReglas.variable.label" default="Variable" /></span>
 					
-						<span class="property-value" aria-labelledby="variable-label"><g:fieldValue bean="${microReglasInstance}" field="variable"/></span>
+						<span class="property-value" aria-labelledby="variable-label"><g:link controller="variable" action="show" id="${microReglasInstance?.variable?.id}">${microReglasInstance?.variable?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

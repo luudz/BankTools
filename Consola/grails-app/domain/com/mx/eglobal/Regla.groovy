@@ -1,4 +1,5 @@
-package com.mx.eglobal
+package com.mx.eglobal;
+import com.mx.eglobal.MicroReglas;
 
 class Regla {
 	String nombre;
