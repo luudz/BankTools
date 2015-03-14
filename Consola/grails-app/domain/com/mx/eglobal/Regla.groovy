@@ -4,7 +4,6 @@ import com.mx.eglobal.MicroReglas;
 class Regla {
 	String nombre;
 	String descripcion;
-	//static hasMany =[microregla :MicroRegla];
 	MicroReglas microregla;
 	Boolean enabled;
 
