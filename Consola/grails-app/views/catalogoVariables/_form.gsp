@@ -1,5 +1,6 @@
 <%@ page import="com.mx.eglobal.CatalogoVariables" %>
 
+
 <div class="fieldcontain ${hasErrors(bean: catalogoVariablesInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="catalogoVariables.nombre.label" default="Nombre" />
@@ -8,6 +9,7 @@
 	<g:textField name="nombre" required="" value="${catalogoVariablesInstance?.nombre}"/>
 
 </div>
+
 
 <div class="fieldcontain ${hasErrors(bean: catalogoVariablesInstance, field: 'descripcion', 'error')} required">
 	<label for="descripcion">
@@ -26,6 +28,7 @@
 	<g:checkBox name="enabled" value="${catalogoVariablesInstance?.enabled}" />
 
 </div>
+
 
 
 <div class="fieldcontain ${hasErrors(bean: catalogoVariablesInstance, field: 'variable', 'error')} required">
