@@ -1,6 +1,5 @@
 <%@ page import="com.mx.eglobal.CatalogoVariables" %>
 
-
 <div class="fieldcontain ${hasErrors(bean: catalogoVariablesInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="catalogoVariables.nombre.label" default="Nombre" />
@@ -9,7 +8,6 @@
 	<g:textField name="nombre" required="" value="${catalogoVariablesInstance?.nombre}"/>
 
 </div>
-
 
 <div class="fieldcontain ${hasErrors(bean: catalogoVariablesInstance, field: 'descripcion', 'error')} required">
 	<label for="descripcion">
@@ -30,13 +28,4 @@
 </div>
 
 
-
-<div class="fieldcontain ${hasErrors(bean: catalogoVariablesInstance, field: 'variable', 'error')} required">
-	<label for="variable">
-		<g:message code="catalogoVariables.variable.label" default="Variable" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="variable" name="variable.id" from="${com.mx.eglobal.Variable.list()}" optionKey="id" required="" value="${catalogoVariablesInstance?.variable?.id}" class="many-to-one"/>
-
-</div>
 

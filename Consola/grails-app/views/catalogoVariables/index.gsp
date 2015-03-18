@@ -27,8 +27,6 @@
 						<g:sortableColumn property="nombre" title="${message(code: 'catalogoVariables.nombre.label', default: 'Nombre')}" />
 					
 						<g:sortableColumn property="descripcion" title="${message(code: 'catalogoVariables.descripcion.label', default: 'Descripcion')}" />
-
-						<th><g:message code="catalogoVariables.variable.label" default="Variable" /></th>
 					
 						<g:sortableColumn property="enabled" title="${message(code: 'catalogoVariables.enabled.label', default: 'Enabled')}" />
 					
@@ -39,15 +37,14 @@
 				<tbody>
 				<g:each in="${catalogoVariablesInstanceList}" status="i" var="catalogoVariablesInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-
+					
 						<td>${fieldValue(bean: catalogoVariablesInstance, field: "nombre")}</td>
-					
-						<td><g:link action="show" id="${catalogoVariablesInstance.id}">${fieldValue(bean: catalogoVariablesInstance, field: "descripcion")}</g:link></td>
 
-						<td>${fieldValue(bean: catalogoVariablesInstance, field: "variable")}</td>
+						<td><g:link action="show" id="${catalogoVariablesInstance.id}">${fieldValue(bean: catalogoVariablesInstance, field: "descripcion")}</g:link></td>
 					
-						<td><g:formatBoolean boolean="${catalogoVariablesInstance.enabled}" /></td>				
-	
+						<td><g:formatBoolean boolean="${catalogoVariablesInstance.enabled}" /></td>
+					
+						
 					
 					</tr>
 				</g:each>

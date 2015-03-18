@@ -22,15 +22,6 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list catalogoVariables">
-
-				<g:if test="${catalogoVariablesInstance?.nombre}">
-				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="catalogoVariables.nombre.label" default="Nombre" /></span>
-					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${catalogoVariablesInstance}" field="nombre"/></span>
-					
-				</li>
-				</g:if>
 			
 				<g:if test="${catalogoVariablesInstance?.descripcion}">
 				<li class="fieldcontain">
@@ -50,13 +41,11 @@
 				</li>
 				</g:if>
 			
-				
-			
-				<g:if test="${catalogoVariablesInstance?.variable}">
+				<g:if test="${catalogoVariablesInstance?.nombre}">
 				<li class="fieldcontain">
-					<span id="variable-label" class="property-label"><g:message code="catalogoVariables.variable.label" default="Variable" /></span>
+					<span id="nombre-label" class="property-label"><g:message code="catalogoVariables.nombre.label" default="Nombre" /></span>
 					
-						<span class="property-value" aria-labelledby="variable-label"><g:link controller="variable" action="show" id="${catalogoVariablesInstance?.variable?.id}">${catalogoVariablesInstance?.variable?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${catalogoVariablesInstance}" field="nombre"/></span>
 					
 				</li>
 				</g:if>

@@ -1,10 +1,12 @@
 package com.mx.eglobal
+import com.mx.eglobal.CatalogoVariables;
+
 
 class Variable {
 	String alias;
 	String columna;
 	String descripcion;
-	String categoria;
+	CatalogoVariables categoria;
 	Boolean enabled;
 
     static constraints = {
