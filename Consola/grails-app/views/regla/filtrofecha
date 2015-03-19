@@ -1,0 +1,134 @@
+<html lang="en" class="no-js"><!--<![endif]--><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Regla List</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/Consola/assets/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="/Consola/assets/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/Consola/assets/apple-touch-icon-retina.png">
+  		<link rel="stylesheet" href="/Consola/assets/main.css?compile=false"><link rel="stylesheet" href="/Consola/assets/mobile.css?compile=false"><link rel="stylesheet" href="/Consola/assets/application.css?compile=false">
+		<script src="/Consola/assets/jquery/jquery-1.11.1.js?compile=false" type="text/javascript"></script>
+<script src="/Consola/assets/jquery.js?compile=false" type="text/javascript"></script>
+<script src="/Consola/assets/application.js?compile=false" type="text/javascript"></script>
+
+		
+		<meta name="layout" content="main">
+		
+		
+	
+	</head>
+	<body>
+		<div id="grailsLogo" role="banner"> <a href="/assets/images"> <img src="/Consola/assets/eglobal.png" alt="eglobal"></a></div>
+		
+		<a href="#list-regla" class="skip" tabindex="-1">Skip to content…</a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="/Consola/">Home</a></li>
+				<li><a href="/Consola/regla/create" class="create">New Regla</a></li>
+			</ul>
+		</div>
+		<div id="list-regla" class="content scaffold-list" role="main">
+			<h1>Regla List</h1>
+			
+			<table>
+			<thead>
+					<tr>
+						<th>id</th>
+						<th class="sortable"><a href="/Consola/regla/index?sort=nombre&amp;max=10&amp;order=asc">Nombre</a></th>
+
+						<th>Microregla</th>
+					
+						
+						<th class="sortable"><a href="/Consola/regla/index?sort=enabled&amp;max=10&amp;order=asc">Enabled</a></th>
+
+						<th>Fecha</th>
+					
+						
+						
+					
+					</tr>
+				</thead>
+				<tbody>
+				
+					<tr class="even">
+					
+					
+						<td>1</td>
+						<td>Regla001</td>
+						
+
+						<td>MicroRegla1</td>
+
+						<td>True</td>
+						<td>16-05-2015 13:30:25</td>
+					
+					</tr>
+				
+					<tr class="odd">
+					
+					
+						<td>2</td>
+						<td>Regla002</td>
+						
+
+						<td>MicroRegla2</td>
+
+						<td>True</td>
+						<td>16-05-2015 13:30:25</td>
+					
+					</tr>
+				
+					<tr class="even">
+					
+					
+						<td>3</td>
+						<td>Regla003</td>
+						
+
+						<td>MicroRegla3</td>
+
+						<td>True</td>
+						<td>16-05-2015 13:30:25</td>
+					
+					</tr>
+				
+					<tr class="odd">
+					
+					
+						<td>4</td>
+						<td>Regla004</td>
+						
+
+						<td>MicroRegla4</td>
+
+						<td>True</td>
+						<td>16-05-2015 13:30:25</td>
+					
+					</tr>
+				
+					<tr class="even">
+					
+					
+						<td>5</td>
+						<td>Regla005</td>
+						
+
+						<td>MicroRegla5</td>
+
+						<td>True</td>
+						<td>16-05-2015 13:30:25</td>
+					
+					</tr>
+				
+				</tbody>
+			</table>
+			<div class="pagination">
+				
+			</div>
+		</div>
+	
+		<div class="footer" role="contentinfo"></div>
+		<div id="spinner" class="spinner" style="display:none;">Loading…</div>
+	
+
+</body></html>
