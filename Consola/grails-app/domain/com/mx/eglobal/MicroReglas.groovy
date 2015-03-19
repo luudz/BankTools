@@ -8,6 +8,7 @@ class MicroReglas {
 	Boolean enabled;
 
     static constraints = {
+  
     }
     String toString(){
     	return "$valor";}

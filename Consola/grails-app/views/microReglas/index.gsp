@@ -23,21 +23,22 @@
 			<table>
 			<thead>
 					<tr>
-							
+					
+						<g:sortableColumn property="enabled" title="${message(code: 'microReglas.enabled.label', default: 'Enabled')}" />
+					
 						<g:sortableColumn property="tipo" title="${message(code: 'microReglas.tipo.label', default: 'Tipo')}" />
 					
 						<g:sortableColumn property="valor" title="${message(code: 'microReglas.valor.label', default: 'Valor')}" />
 					
 						<th><g:message code="microReglas.variable.label" default="Variable" /></th>
-
-						<g:sortableColumn property="enabled" title="${message(code: 'microReglas.enabled.label', default: 'Enabled')}" />
 					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${microReglasInstanceList}" status="i" var="microReglasInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-				
+					
+						<td><g:link action="show" id="${microReglasInstance.id}">${fieldValue(bean: microReglasInstance, field: "enabled")}</g:link></td>
 					
 						<td>${fieldValue(bean: microReglasInstance, field: "tipo")}</td>
 					

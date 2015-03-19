@@ -1,5 +1,6 @@
 package com.mx.eglobal
 
+import grails.plugin.springsecurity.annotation.Secured;
 
 
 import static org.springframework.http.HttpStatus.*
@@ -10,15 +11,17 @@ class ReglaController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    @Secured(['ROLE_ADMIN'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Regla.list(params), model:[reglaInstanceCount: Regla.count()]
     }
-
+    @Secured(['ROLE_ADMIN'])
     def show(Regla reglaInstance) {
         respond reglaInstance
     }
 
+    @Secured(['ROLE_ADMIN'])
     def create() {
         respond new Regla(params)
     }

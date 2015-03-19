@@ -1,5 +1,7 @@
 package com.mx.eglobal
 
+import grails.plugin.springsecurity.annotation.Secured;
+
 
 
 import static org.springframework.http.HttpStatus.*
@@ -10,15 +12,18 @@ class CatalogoVariablesController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    @Secured(['ROLE_ADMIN'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond CatalogoVariables.list(params), model:[catalogoVariablesInstanceCount: CatalogoVariables.count()]
     }
 
+    @Secured(['ROLE_ADMIN'])
     def show(CatalogoVariables catalogoVariablesInstance) {
         respond catalogoVariablesInstance
     }
-
+    
+    @Secured(['ROLE_ADMIN'])
     def create() {
         respond new CatalogoVariables(params)
     }
