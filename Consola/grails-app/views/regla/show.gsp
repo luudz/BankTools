@@ -45,7 +45,11 @@
 				<li class="fieldcontain">
 					<span id="microregla-label" class="property-label"><g:message code="regla.microregla.label" default="Microregla" /></span>
 					
+<<<<<<< HEAD
 						<span class="property-value" aria-labelledby="microregla-label"><g:link controller="microReglas" action="show" id="${reglaInstance?.microregla?.id}">${reglaInstance?.microregla?.encodeAsHTML()}</g:link></span>
+=======
+						<span class="property-value" aria-labelledby="microregla-label"><g:fieldValue bean="${reglaInstance}" field="microregla"/></span>
+>>>>>>> origin/master
 					
 				</li>
 				</g:if>

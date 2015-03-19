@@ -23,7 +23,7 @@
 		<g:message code="regla.microregla.label" default="Microregla" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="microregla" name="microregla.id" from="${com.mx.eglobal.MicroReglas.list()}" optionKey="id" required="" value="${reglaInstance?.microregla?.id}" class="many-to-one"/>
+	<g:textField name="microregla" required="" value="${reglaInstance?.microregla}"/>
 
 </div>
 

@@ -27,8 +27,12 @@
 			</g:hasErrors>
 			<g:form url="[resource:reglaInstance, action:'save']" >
 				<fieldset class="form">
+<<<<<<< HEAD
 					<!--g:render template="form"/-->
 					<g:render template="lista1"/>	
+=======
+					<g:render template="form"/>
+>>>>>>> origin/master
 				</fieldset>
 				<fieldset class="buttons">
 					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
