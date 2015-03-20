@@ -22,6 +22,7 @@
 	});
 	</script-->
 	<script>
+
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'microReglas.label', default: 'MicroReglas')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
@@ -50,6 +51,8 @@
 						<g:sortableColumn property="valor" title="${message(code: 'microReglas.valor.label', default: 'Valor')}" />
 					
 						<th><g:message code="microReglas.variable.label" default="Variable" /></th>
+
+						<g:sortableColumn property="valor" title="${message(code: 'microReglas.valor.label', default: 'Eliminar')}" />
 					
 					</tr>
 				</thead>
