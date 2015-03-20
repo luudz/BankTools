@@ -67,6 +67,10 @@
 						<td>${fieldValue(bean: microReglasInstance, field: "valor")}</td>
 					
 						<td>${fieldValue(bean: microReglasInstance, field: "variable")}</td>
+						
+						<td align="right">
+							<input type="button" value="-" class="clsEliminarFila">
+						</td>
 					
 					</tr>
 				</g:each>
