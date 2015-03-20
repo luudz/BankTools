@@ -3,22 +3,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
+	<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/query.min.js"></script>
+		<!--script>
+			jQuery(document).ready(function(){ 
+			$(".content scaffold-create").hide();              
+    		$(".MO").click(function(){
+     		var nodo = $(this).attr("href");  
+			if ($(nodo).is(":visible")){
+	       		$(nodo).hide();
+        		return false;
+        	}else{
+    	    	$(".content scaffold-create").hide();                             
+        		$(nodo).fadeToggle( "slow" );
+        	return false;
+       }
+    });
+	});
+	</script-->
+	<script>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'microReglas.label', default: 'MicroReglas')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
