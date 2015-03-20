@@ -5,7 +5,7 @@ import com.mx.eglobal.MicroReglas;
 import com.mx.eglobal.security.SecUser;
 import com.mx.eglobal.security.SecRole;
 import com.mx.eglobal.security.SecUserSecRole;
-
+/*Cambio test*/
 class BootStrap {
     
     def init = { servletContext ->
