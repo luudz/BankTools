@@ -6,7 +6,34 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#create-microReglas" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<script>
+$(document).ready(function() {
+    $('.palette .add').click(function(e) {
+        var options = $('select.unselected option:selected');
+        $('select.selected').append(options);
+        e.preventDefault();
+        return false;
+    });
+    $('.palette .remove').click(function(e) {
+        var options = $('select.selected option:selected');
+        $('select.unselected').append(options);
+        e.preventDefault();
+        return false;
+    });
+    $('.palette .down').click(function(e) {
+        var options = $('select.selected option:selected');
+        options.last().next().after(options)
+        e.preventDefault();
+        return false;
+    });
+    $('.palette .up').click(function(e) {
+        var options = $('select.selected option:selected');
+        options.first().prev().before(options)
+        e.preventDefault();
+        return false;
+    });
+});
+</script>		<a href="#create-microReglas" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>

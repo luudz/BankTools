@@ -109,28 +109,25 @@ $(document).ready(function() {
      </select>
   </div>
 </div>
-
+		<fieldset class="buttons">
+		</br>
 		<button href="#create-microReglas" class='MO'>Agregar microregla</button>
+		</fieldset>
 	<div id="create-microReglas" class="content scaffold-create" role="main" style="display: none;">
-			<h1><g:message code="default.create.label" args="[entityNamemicro]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<g:hasErrors bean="${microReglasInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${microReglasInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
-			<g:form url="[resource:microReglasInstance, action:'save']" >
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
-			</g:form>
+			<form action="/Desarrollo/BankTools/Consola/grails-app/microReglas" method="POST">
+			<fieldset class="form">
+			<input name="enabled" type="checkbox" />Enabled: </br>
+			Tipo:
+			<input type="text" name="tipo" value="" /></br>
+			Valor:
+			<input type="text" name="valor" value="" /></br>
+			Variable:
+			<input type="text" name="variable" value="" /></br>
+			</fieldset>
+			<fieldset class="buttons">
+			<input class="save" type="submit" value="Crear" />
+			</fieldset>
+			</form>
 		</div>
 	</body>
 </html>
