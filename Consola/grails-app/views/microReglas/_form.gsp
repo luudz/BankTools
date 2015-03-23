@@ -16,7 +16,7 @@
 		<g:message code="microReglas.tipo.label" default="Tipo" />
 		<span class="required-indicator">*</span>
 	</label>
-	 <g:select id="myselect" name="tipo" value="${microReglasInstance.tipo}" from="${['1': 'MAYOR QUE > ', '2': 'MENOR QUE < ', '3': 'IGUAL QUE = ','4':'MAYOR IGUAL QUE >= ','5':'MENOR IGUAL QUE <= ']}" optionKey="key" optionValue="value" />   
+	<g:field name="tipo" type="number" value="${microReglasInstance.tipo}" required=""/>
 
 </div>
 

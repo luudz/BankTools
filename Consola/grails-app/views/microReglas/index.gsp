@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+		<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/query.min.js"></script>
 		<!--script>
 			jQuery(document).ready(function(){ 
@@ -22,6 +23,23 @@
 	});
 	</script-->
 	<script>
+	$(document).ready(function() 
+    { 
+        $("#mr").tablesorter(); 
+    } 
+	); 
+	</script>
+	<script>
+	$(document).ready(function() 
+    { 
+        $("#mr").tablesorter( {sortList: [[0,3], [1,0]]} ); 
+    } 
+); 
+	</script>
+	<!Texto modificable-->
+	<script>
+
+	</script>
 
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'microReglas.label', default: 'MicroReglas')}" />
@@ -40,7 +58,7 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table id="mr" class="tablesorter">
 			<thead>
 					<tr>
 					
@@ -67,10 +85,8 @@
 						<td>${fieldValue(bean: microReglasInstance, field: "valor")}</td>
 					
 						<td>${fieldValue(bean: microReglasInstance, field: "variable")}</td>
-						
-						<td align="right">
-							<input type="button" value="-" class="clsEliminarFila">
-						</td>
+
+						<td align="right"><input type="button" value="-" class="clsEliminarFila"></td>
 					
 					</tr>
 				</g:each>
