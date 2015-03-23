@@ -1,5 +1,6 @@
+<%@ page import="com.mx.eglobal.MicroReglas"%>
+
 <!DOCTYPE html>
-<!--hola-->
 <html>
 	<head>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -21,7 +22,7 @@
 	});
 	</script>
 		<meta name="layout" content="main">
-		<g:set var="entityNamemicro" value="${message(code: 'microReglas.label', default: 'MicroReglas')}" />
+		<g:set var="entityNamemicro" value="${message(code: 'microReglas.label', default: 'MicroReglas')}" bean="${microReglasInstance}"/>
 		<g:set var="entityName" value="${message(code: 'regla.label', default: 'Regla')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 
@@ -63,6 +64,7 @@ $(document).ready(function() {
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
+
 		<div id="create-regla" class="content scaffold-create" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -94,6 +96,7 @@ $(document).ready(function() {
      <option>ble</option>
      <option>bli</option>
      <option>blo</option>
+     <option>blu</option>     
      <option>hola mundo</option>
     </select>
   </div>
@@ -108,9 +111,7 @@ $(document).ready(function() {
 </div>
 
 		<button href="#create-microReglas" class='MO'>Agregar microregla</button>
-
-		<a href="#create-microReglas" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="create-microReglas" class="content scaffold-create" role="main">
+	<div id="create-microReglas" class="content scaffold-create" role="main" style="display: none;">
 			<h1><g:message code="default.create.label" args="[entityNamemicro]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
