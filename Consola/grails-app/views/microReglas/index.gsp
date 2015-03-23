@@ -36,9 +36,80 @@
     } 
 ); 
 	</script>
-	<!Texto modificable-->
-	
 	<script>
+	(document).ready(function () {
+    var $tbody = $("tbody");
+
+    //hacemos una itinerancia en cada fila
+    $tbody.find("tr").each(function () {
+    	
+        //si no es la primera fila, es decir, la que tiene clase head
+        if (!$(this).hasClass("head")) {
+
+            //hacemos un bucle en cada columna
+            $(this).children().each(function () {
+
+                //añadimos la opción editable sólo a la última columna
+                if ($(this).hasClass("last")) {
+                    $(this).click(function () {
+
+                        //si ya le has clickado, la zona editable estará activa
+                        if($(this).data("clicked") === true){
+
+                            //evitamos la ejecución del script
+                            return false;
+
+                        //si es la primera vez, dejamos una marca de que le hemos hecho click
+                        }else{
+                            $(this).data("clicked", true);
+                        }
+
+                        //la columna
+                        var td = $(this),
+
+                            //la información de la columna
+                            texto = td.text(),
+
+                            //el ancho + bordes + padding (sin contar margin)
+                            ancho = td.outerWidth(),
+
+                            //el padding izquierdo
+                            padding = td.css("padding-left");
+
+                        //eliminamos el padding para que no se redimensione al insertar el campo
+                        td.css({
+                            "padding-left": "0px"
+                        });
+
+                        //añadimos el campo
+                        td.html("<input style='margin-left: " + padding + "; width: " + (-parseInt(padding, 10) + ancho) + "px' class='transparent' value='" + texto + "' />");
+
+                        //al hacer focus insertamos su mismo valor
+                        //esto es para evitar que se seleccione el texto
+                        //al hacer auto-focus
+                        td.find("input").focus(function () {
+                            $(this).val($(this).val());
+                        });
+
+                        //cuando se quita el focus volvemos a poner los datos dentro del span
+                        td.find("input").blur(function () {
+                            td.html("<span class='table-data'>"+$(this).val()+"</span>");
+                            
+                            //eliminamos el estilo, es decir, el padding de 0px que le habíamos añadido
+                            td.removeAttr("style");
+
+                            //borramos la variable que indica que se ha clickado
+                            td.data("clicked", false);
+                        });
+
+                        //hacemos el autofocus
+                        td.find("input").focus();
+                    });
+                }
+            });
+        }
+    });
+});
 
 	</script>
 
