@@ -659,3 +659,30 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+
+/*CREAR MICROREGLAS DESDE REGLAS*/
+#create-microReglas{
+	background-color: #504C4C;
+	border:2px solid #000000;
+    color:#fff;
+    text-align: right;
+}
+.contenedor-reglas{
+	display: table;
+	height: auto;
+}
+.contenedor-reglasf1{
+	display: table-row;
+}
+.contenedor-reglasc1{
+	display: table-cell;
+}
+.contenedor-reglasc2{
+	display: table-cell;
+}
+.contenedor-reglasc3{
+	display: table-cell;
+}
+.contenedor-reglasf2{
+	display: table-row;
+}

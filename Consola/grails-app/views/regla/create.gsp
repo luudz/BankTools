@@ -22,11 +22,13 @@
 	});
 	</script>
 		<meta name="layout" content="main">
+	<link type="text/css" rel="stylesheet" href="web-app/bootstrap-3.3.4-dist/bootstrap.css"/>
+	<link type="text/css" rel="stylesheet" href="web-app/font-awesome-4.3.0/css/font-awesome.min.css"/>
 		<g:set var="entityNamemicro" value="${message(code: 'microReglas.label', default: 'MicroReglas')}" bean="${microReglasInstance}"/>
 		<g:set var="entityName" value="${message(code: 'regla.label', default: 'Regla')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 
-				<script>
+	<script>
 $(document).ready(function() {
     $('.palette .add').click(function(e) {
         var options = $('select.unselected option:selected');
@@ -89,7 +91,7 @@ $(document).ready(function() {
 			</g:form>
 		</div>
 
-		<div class="palette">
+		<!--div class="palette">
   <div class="choices" style = "float: left">
     <select multiple="true" class="unselected">
      <option>bla</option>
@@ -108,26 +110,6 @@ $(document).ready(function() {
      <select multiple="true" class="selected">
      </select>
   </div>
-</div>
-		<fieldset class="buttons">
-		</br>
-		<button href="#create-microReglas" class='MO'>Agregar microregla</button>
-		</fieldset>
-	<div id="create-microReglas" class="content scaffold-create" role="main" style="display: none;">
-			<form action="/Desarrollo/BankTools/Consola/grails-app/microReglas" method="POST">
-			<fieldset class="form">
-			<input name="enabled" type="checkbox" />Enabled: </br>
-			Tipo:
-			<input type="text" name="tipo" value="" /></br>
-			Valor:
-			<input type="text" name="valor" value="" /></br>
-			Variable:
-			<input type="text" name="variable" value="" /></br>
-			</fieldset>
-			<fieldset class="buttons">
-			<input class="save" type="submit" value="Crear" />
-			</fieldset>
-			</form>
-		</div>
+</div-->
 	</body>
 </html>

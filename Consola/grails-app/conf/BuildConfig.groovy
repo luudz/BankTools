@@ -63,6 +63,8 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.9.9"
         compile ":modaldynamix:0.12"
         compile ":spring-security-core:2.0-RC4"
+        compile ":twitter-bootstrap:3.3.4"
+        compile ":font-awesome-resources:4.2.0.0"
         // plugins needed at runtime but not for compilation
         runtime ":jquery:1.11.1"
         runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
