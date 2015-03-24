@@ -3,42 +3,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		
+
+
 		<script src="jquery.appendGrid-1.0.0.js"></script>
 
 
 		<script>
-			$('#table').editableTableWidget();
-			$('#table').editableTableWidget({editor: $('<textarea>')});
-		</script>
-
-		<script>
-			$('#table').editableTableWidget({
-			cloneProperties: ['background', 'border', 'outline']
+			$(document).ready(function(){
+     		$('table').dataTable().makeEditable();
 			});
-		</script>
-
-		<script>
-		$('table td').on('validate', function(evt, newValue) {
-		if (....) { 
-			return false; // mark cell as invalid 
-		}
-		});
 
 		</script>
+		<script language="JavaScript" type="text/javascript">
+            $(document).ready(function () {
+                $('#myDataTable').dataTable().makeEditable();
+            });
+        </script>
 
-		<script>
-			$('table td').on('change', function(evt, newValue) {
-			// do something with the new cell value 
-			if (....) { 
-				return false; // reject change
-			}
-			});
-		</script>
-
-
+	
 
 
 
@@ -77,8 +60,8 @@
 					
 					</tr>
 				</thead>
-				<tbody>
-				<tr>
+				<tbody id="myDataTable">
+				<tr id="1">
 						<td><INPUT TYPE="text" SIZE="25" NAME="enabled"></td>
 						<td><INPUT TYPE="text" SIZE="25" NAME="tipo"></td>
 						<td><INPUT TYPE="text" SIZE="25" NAME="valor"></td>
@@ -87,7 +70,7 @@
 				</tr>
 				<g:each in="${microReglasInstanceList}" status="i" var="microReglasInstance">
 					
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr id="2" class="${(i % 2) == 0 ? 'even' : 'odd'}">
 						
 						<td><g:link action="show" id="${microReglasInstance.id}">${fieldValue(bean: microReglasInstance, field: "enabled")}</g:link></td>
 					
