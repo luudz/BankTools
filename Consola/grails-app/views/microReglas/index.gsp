@@ -38,8 +38,6 @@
 </script>
 
 
-	
-
 
 
 		<meta name="layout" content="main">
@@ -80,6 +78,13 @@
 					</tr>
 				</thead>
 				<tbody>
+					<tr class="fila-base">
+						<td><input type="text" class="Enabled" /></td>
+						<td><input type="text" class="Tipo" /></td>
+						<td><input type="text" class="Valor" /></td>
+						<td><input type="text" class="Variable" /></td>
+						<td class="eliminar">Eliminar</td>
+					</tr>
 				
 				<g:each in="${microReglasInstanceList}" status="i" var="microReglasInstance">
 					
