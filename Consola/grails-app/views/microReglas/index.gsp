@@ -3,13 +3,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
-
-
+		<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/query.min.js"></script>
 		<script src="jquery.appendGrid-1.0.0.js"></script>
 
 
-		<script>
+		<!--script>
 			$(document).ready(function(){
      		$('table').dataTable().makeEditable();
 			});
@@ -19,7 +18,25 @@
             $(document).ready(function () {
                 $('#myDataTable').dataTable().makeEditable();
             });
-        </script>
+        </script-->
+
+        <script type="text/javascript">
+ 
+		$(function(){
+		// Clona la fila oculta que tiene los campos base, y la agrega al final de la tabla
+			$("#agregar").on('click', function(){
+			$("#tabla tbody tr:eq(0)").clone().removeClass('fila-base').appendTo("#tabla tbody");
+		});
+ 	
+		// Evento que selecciona la fila y la elimina 
+		$(document).on("click",".eliminar",function(){
+			var parent = $(this).parents().get(0);
+			$(parent).remove();
+		});
+		});
+ 
+</script>
+
 
 	
 
@@ -44,9 +61,9 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table id="tabla">
 			<thead>
-					<tr>
+					<tr class="fila-base">
 						
 						<g:sortableColumn property="enabled" title="${message(code: 'microReglas.enabled.label', default: 'Enabled')}" />
 					
@@ -56,21 +73,17 @@
 					
 						<th><g:message code="microReglas.variable.label" default="Variable" /></th>
 
-						<g:sortableColumn property="valor" title="${message(code: 'microReglas.valor.label', default: 'Eliminar')}" />
+						<th>&nbsp;</th>
+
+						<!--g:sortableColumn property="valor" title="${message(code: 'microReglas.valor.label', default: 'Eliminar')}" /-->
 					
 					</tr>
 				</thead>
-				<tbody id="myDataTable">
-				<tr id="1">
-						<td><INPUT TYPE="text" SIZE="25" NAME="enabled"></td>
-						<td><INPUT TYPE="text" SIZE="25" NAME="tipo"></td>
-						<td><INPUT TYPE="text" SIZE="25" NAME="valor"></td>
-						<td><INPUT TYPE="text" SIZE="25" NAME="variable"></td>
-						<td align="right"><input type="button" value="Agregar" class="agregar"></td>
-				</tr>
+				<tbody>
+				
 				<g:each in="${microReglasInstanceList}" status="i" var="microReglasInstance">
 					
-					<tr id="2" class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 						
 						<td><g:link action="show" id="${microReglasInstance.id}">${fieldValue(bean: microReglasInstance, field: "enabled")}</g:link></td>
 					
@@ -80,11 +93,14 @@
 					
 						<td>${fieldValue(bean: microReglasInstance, field: "variable")}</td>
 
-					
+						<!--td align="right"><input type="button" id="agregar "value="Agregar"</td-->
+
+						<td class="eliminar">Eliminar</td>				
 					</tr>
 				</g:each>
 				</tbody>
 			</table>
+			<input type="button" id="agregar" value="Agregar fila"/>
 			<div class="pagination">
 				<g:paginate total="${microReglasInstanceCount ?: 0}" />
 			</div>
