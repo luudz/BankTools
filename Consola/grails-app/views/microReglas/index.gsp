@@ -6,6 +6,8 @@
 		<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/query.min.js"></script>
 		<script src="jquery.appendGrid-1.0.0.js"></script>
+		<script type="text/javascript" src="jquery.js"></script> 
+		<script type="text/javascript" src="jquery.jeditable.js"></script>
 
 
 		<!--script>
@@ -35,7 +37,7 @@
 		});
 		});
  
-</script>
+		</script>
 
 
 
@@ -79,11 +81,11 @@
 				</thead>
 				<tbody>
 					<tr class="fila-base">
-						<td><input type="text" class="Enabled" /></td>
-						<td><input type="text" class="Tipo" /></td>
-						<td><input type="text" class="Valor" /></td>
-						<td><input type="text" class="Variable" /></td>
-						<td class="eliminar">Eliminar</td>
+						<td><input type="text" field="enabled" ></td>
+						<td><input type="text" field="tipo" /></td>
+						<td><input type="text" field="valor" /></td>
+						<td><input type="text" fiel="variable" /></td>
+						<td><input type="button" id="agregar" value="+"/></td>
 					</tr>
 				
 				<g:each in="${microReglasInstanceList}" status="i" var="microReglasInstance">
@@ -98,14 +100,14 @@
 					
 						<td>${fieldValue(bean: microReglasInstance, field: "variable")}</td>
 
-						<!--td align="right"><input type="button" id="agregar "value="Agregar"</td-->
+						<!--td><input type="button" id="agregar" value="Agregar fila"/></td-->
 
-						<td class="eliminar">Eliminar</td>				
+						<!--td class="eliminar">Eliminar</td-->				
 					</tr>
 				</g:each>
 				</tbody>
 			</table>
-			<input type="button" id="agregar" value="Agregar fila"/>
+			<!--input type="button" id="agregar" value="Agregar fila"/-->
 			<div class="pagination">
 				<g:paginate total="${microReglasInstanceCount ?: 0}" />
 			</div>
