@@ -61,6 +61,9 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
+			<div claas="botag" style="background-color:green; background-color:green; width:7%; left:90%;">
+				<label for="lnombre">Nombre:</label> 
+			</div>
 			<table id="tabla">
 			<thead>
 					<tr class="fila-base">
@@ -73,7 +76,7 @@
 					
 						<th><g:message code="microReglas.variable.label" default="Variable" /></th>
 
-						<th>&nbsp;</th>
+						<!--th>&nbsp;</th-->
 
 						<!--g:sortableColumn property="valor" title="${message(code: 'microReglas.valor.label', default: 'Eliminar')}" /-->
 					
@@ -85,7 +88,7 @@
 						<td><input type="text" field="tipo" /></td>
 						<td><input type="text" field="valor" /></td>
 						<td><input type="text" fiel="variable" /></td>
-						<td><input type="button" id="agregar" value="+"/></td>
+						<!--td><input type="button" id="agregar" value="+"/></td-->
 					</tr>
 				
 				<g:each in="${microReglasInstanceList}" status="i" var="microReglasInstance">
